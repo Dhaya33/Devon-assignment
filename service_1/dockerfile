@@ -1,0 +1,13 @@
+# Adjust according to the readme instructions in the Golang app
+FROM golang:1.20
+
+WORKDIR /app
+COPY . .
+
+
+RUN go build -o main .
+
+EXPOSE 8001
+
+CMD ["./main"]
+
