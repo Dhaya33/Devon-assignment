@@ -27,7 +27,7 @@ This project demonstrates how to containerize two backend microservices — one 
 | Service     | Tech Stack     | URL Path Prefix | Port Inside Container |
 |-------------|----------------|------------------|------------------------|
 | Service 1   | Golang         | `/service1/`     | `8001`                 |
-| Service 2   | Python + Flask | `/service2/`     | `8082`                 |
+| Service 2   | Python + Flask | `/service2/`     | `8002`                 |
 | Nginx       | Nginx          | Reverse Proxy    | `80`                   |
 
 ---
@@ -37,7 +37,7 @@ This project demonstrates how to containerize two backend microservices — one 
 Nginx forwards requests as follows:
 
 - `/service1/*` ⟶ Golang app at `service_1:8001`
-- `/service2/*` ⟶ Flask app at `service_2:8082`
+- `/service2/*` ⟶ Flask app at `service_2:8002`
 
 Incoming requests are also logged with timestamps and paths for visibility.
 
